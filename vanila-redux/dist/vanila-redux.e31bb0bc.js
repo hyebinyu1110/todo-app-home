@@ -924,8 +924,8 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
-var divToggle = document.querySelector('.toggle');
-var counter = document.querySelector('h1');
+var divToggle = document.querySelector(".toggle");
+var counter = document.querySelector("h1");
 var btnIncrease = document.querySelector("#increase");
 var btnDecrease = document.querySelector("#decrease");
 var TOGGLE_SWITCH = "TOGGLE_SWITCH";
@@ -954,17 +954,16 @@ var decrease = function decrease() {
 var initialState = {
   toggle: false,
   counter: 0
-}; // state가 undefined일 때는 initialState를 기본값으로 사용
+}; // state가 undefined 일 때는 initialState를 기본값으로 사용
 
 function reducer() {
   var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : initialState;
   var action = arguments.length > 1 ? arguments[1] : undefined;
 
-  // action.type에 따라 다른 작업을 수행함
+  // action.type에 따라 다른 작업을 처리함
   switch (action.type) {
     case TOGGLE_SWITCH:
       return _objectSpread(_objectSpread({}, state), {}, {
-        // 불변성 유지를 해 주어야 합니다.
         toggle: !state.toggle
       });
 
@@ -1002,15 +1001,15 @@ var render = function render() {
 render();
 store.subscribe(render);
 
-divToggle.onClick = function () {
+divToggle.onclick = function () {
   store.dispatch(toggleSwitch());
 };
 
-btnIncrease.onClick = function () {
+btnIncrease.onclick = function () {
   store.dispatch(increase(1));
 };
 
-btnDecrease.onClick = function () {
+btnDecrease.onclick = function () {
   store.dispatch(decrease());
 };
 },{"redux":"node_modules/redux/es/redux.js"}],"../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
@@ -1041,7 +1040,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52368" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52072" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
