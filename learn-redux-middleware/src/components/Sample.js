@@ -1,3 +1,4 @@
+
 const Sample = ({loadingPost, loadingUsers, post, users})=>{
 
     return (
