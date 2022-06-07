@@ -1,16 +1,14 @@
-import CounterContainer from "./containers/CounterContainer";
-import TodosContainer from "./containers/TodosContainer";
+import Counter from "./components/Counter";
+import Todos from "./components/Todos";
 
-
-const App = () => {
-  return (
-    <div>
-      <CounterContainer  />
-      <hr />
-      <TodosContainer />
-
-    </div>
-  );
+const App = () =>{
+    return (
+        <div>
+            <Counter number={0} />
+            <hr />
+            <Todos />
+        </div>
+    )
 }
 
 export default App;

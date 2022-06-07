@@ -1,5 +1,5 @@
 const Counter = ({number, onIncrease, onDecrease}) =>{
-    return (
+    return(
         <div>
             <h1>{number}</h1>
             <div>
@@ -7,8 +7,8 @@ const Counter = ({number, onIncrease, onDecrease}) =>{
                 <button onClick={onDecrease}>-1</button>
             </div>
         </div>
-    )
-}
+    );
+};
 
 
 export default Counter;
