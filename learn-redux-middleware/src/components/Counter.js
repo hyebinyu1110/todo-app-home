@@ -7,3 +7,5 @@ const Counter = ({onIncrease, onDecrease, number}) =>{
         </div>
     )
 }
+
+export default Counter;
