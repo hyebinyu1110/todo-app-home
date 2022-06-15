@@ -31,16 +31,16 @@ const initialState = {
 
 
 const sample = handleActions(
-    { 
-        [GET_POST_SUCCESS]: (state, action) =>({
+    {
+        [GET_POST_SUCCESS]: (state, action) => ({
             ...state,
             post: action.payload
         }),
 
-        [GET_USERS_SUCCESS]: (state, action)=>({
+        [GET_USERS_SUCCESS]: (state, action) => ({
             ...state,
             users: action.payload
-       })
+        })
     },
     initialState
 );
