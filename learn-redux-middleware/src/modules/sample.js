@@ -16,13 +16,17 @@ const GET_USERS = 'sample/GET_USERS';
 const GET_USERS_SUCCESS = 'sample/GET_USERS_SUCCESS';
 const GET_USERS_FAILURE = 'sample/GET_USERS_FAILURE';
 
+
+export const getPost = createAction(GET_POST, id => id);
+export const getUsers = createAction(GET_USERS);
+
 function* getPostSaga(action) {
     yield put(startLoading(GET_POST)); //로딩시작
     // 파라미터로 action을 받아오면 액션의 정보를 조회할 수 있습니다. 
     try {
         // call을 사용하면 Promise를 반환하는 함수를 호출하고, 기다릴 수 있습니다.
         //첫번째 파라미터는 함수, 나머지 파라미터는 해당 함수에 넣을 인수입니다.
-        const yield call(api.getPost, action.payload); // api.getPost(action.payload)를 의미
+        const post = yield call(api.getPost, action.payload); // api.getPost(action.payload)를 의미
         yield put({
             type: GET_POST_SUCCESS,
             payload: post.data
