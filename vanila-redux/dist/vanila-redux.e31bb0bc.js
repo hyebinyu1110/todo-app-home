@@ -924,8 +924,8 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
-var divToggle = document.querySelector(".toggle");
-var counter = document.querySelector("h1");
+var divToggle = document.querySelector('.toggle');
+var counter = document.querySelector('h1');
 var btnIncrease = document.querySelector("#increase");
 var btnDecrease = document.querySelector("#decrease");
 var TOGGLE_SWITCH = "TOGGLE_SWITCH";
@@ -954,16 +954,17 @@ var decrease = function decrease() {
 var initialState = {
   toggle: false,
   counter: 0
-}; // state가 undefined 일 때는 initialState를 기본값으로 사용
+}; // state가 undefined 일때는 initialState를 기본값으로 사용
 
 function reducer() {
   var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : initialState;
   var action = arguments.length > 1 ? arguments[1] : undefined;
 
-  // action.type에 따라 다른 작업을 처리함
+  // action.type 에 따라 다른 작업을 처리함
   switch (action.type) {
     case TOGGLE_SWITCH:
       return _objectSpread(_objectSpread({}, state), {}, {
+        // 불변성을 유지해야 한다.
         toggle: !state.toggle
       });
 
@@ -985,13 +986,13 @@ function reducer() {
 var store = (0, _redux.createStore)(reducer);
 
 var render = function render() {
-  var state = store.getState(); // 현재 상태를 불러옵니다.
+  var state = store.getState(); // 현재의 상태를 불러옵니다. 
   // 토글 처리
 
   if (state.toggle) {
-    divToggle.classList.add('active');
+    divToggle.classList.add("active");
   } else {
-    divToggle.classList.remove('active');
+    divToggle.classList.remove("active");
   } // 카운터 처리
 
 
@@ -1040,7 +1041,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52072" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50305" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

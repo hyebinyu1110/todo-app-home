@@ -1,4 +1,5 @@
 const Sample = ({ loadingPost, loadingUsers, post, users }) => {
+    console.log(users);
     return (
         <div>
             <section>
@@ -15,7 +16,7 @@ const Sample = ({ loadingPost, loadingUsers, post, users }) => {
             <section>
                 <h1>사용자 목록</h1>
                 {loadingUsers && '로딩 중...'}
-                {!loadingUsers && post && (
+                {!loadingUsers && users && (
                     <ul>
                         {
                             users.map(user => (
